@@ -1,0 +1,92 @@
+[
+	{
+		"id": 11,
+		"code": "espejocesantoni",
+		"name": "Espejo cesantoni",
+		"description": "Espejo cesantoni para decorar tu baño.",
+		"price": 4587.2500,
+		"urlImage": "noimage.jpg",
+		"brandId": 21
+	},
+	{
+		"id": 12,
+		"code": "pisointerior",
+		"name": "Piso interior",
+		"description": "Piso interior",
+		"price": 0.0000,
+		"urlImage": "",
+		"brandId": 22
+	},
+	{
+		"id": 13,
+		"code": "sanitario_cesantoni",
+		"name": "sanitario cesantoni",
+		"description": "sanitario cesantoni",
+		"price": 0.0000,
+		"urlImage": "sanitario_cesantoni.jpg",
+		"brandId": 21
+	},
+	{
+		"id": 15,
+		"code": "demo",
+		"name": "demo",
+		"description": "demo",
+		"price": 0.0000,
+		"urlImage": "",
+		"brandId": 20
+	},
+	{
+		"id": 16,
+		"code": "azulejorustico",
+		"name": "azulejorustico",
+		"description": "azulejo rustico",
+		"price": 0.0000,
+		"urlImage": "rustico.jpg",
+		"brandId": 20
+	},
+	{
+		"id": 17,
+		"code": "espejo-trendy",
+		"name": "Espejo Trendy Rectangular",
+		"description": "Con este espejo decorativo contemporáneo no quedará duda de tu buen gusto y de los finos detalles que decoran tu hogar. Es perfecto para la sala o el comedor, fabricado en resina con madera y espejo sin bisel, acabado en plata con toques bronces.",
+		"price": 1999.0000,
+		"urlImage": "p17_4780243-1.jpg",
+		"brandId": 20
+	},
+	{
+		"id": 18,
+		"code": "123",
+		"name": "asdf",
+		"description": "asdf",
+		"price": 1535.0000,
+		"urlImage": "noimage.jpg",
+		"brandId": 20
+	},
+	{
+		"id": 19,
+		"code": "23456",
+		"name": "23456",
+		"description": "234",
+		"price": 25.3600,
+		"urlImage": "noimage.jpg",
+		"brandId": 21
+	},
+	{
+		"id": 21,
+		"code": "1234",
+		"name": "rustico 1234",
+		"description": "rustico 1234",
+		"price": 4587.2100,
+		"urlImage": "noimage.jpg",
+		"brandId": 22
+	},
+	{
+		"id": 22,
+		"code": "teni-gues-negro",
+		"name": "teni-guess-negro",
+		"description": "teni guess negro",
+		"price": 1138.7400,
+		"urlImage": "p22_teni-guess-negro-4.jpg",
+		"brandId": 21
+	}
+]
