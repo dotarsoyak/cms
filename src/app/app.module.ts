@@ -10,6 +10,9 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HorizontalCardComponent } from './shared/partials/cards/horizontal-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/modules/material.module';
+import { SharedModule } from './shared/modules/shared.module';
 
 @NgModule({
   imports: [
@@ -22,7 +25,10 @@ import { HorizontalCardComponent } from './shared/partials/cards/horizontal-card
       {path:'login', component: LoginComponent},
       {path:'', redirectTo:'home', pathMatch:'full'},
       {path:'**', component: PageNotFoundComponent}
-    ])
+    ]),
+    BrowserAnimationsModule,
+    MaterialModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,
