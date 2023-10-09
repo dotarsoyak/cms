@@ -1,22 +1,15 @@
-<div *ngIf="products">
-    <div class="card mb-3" style="max-width: 540px;" *ngFor="let product of products">
-        <div class="row g-0">
-        <div class="col-md-4">
-            <img src="./assets/images/noimage.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-            <h5 class="card-title">
-                {{product.name}}
-            </h5>
-            <p class="card-text">
-                {{product.description}}
-            </p>
-            <p class="card-text"><small class="text-muted">
-                {{product.price}}
-            </small></p>
-            </div>
-        </div>
-        </div>
-    </div>
+<div *ngIf="posts">
+    <mat-card class="example-card" *ngFor="let post of posts">
+        <mat-card-header>
+          <mat-card-subtitle>Posted by: {{post.author}} on: {{post.created}}</mat-card-subtitle>
+          <mat-card-title>{{post.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ post.content }}</p>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-footer>
+        </mat-card-footer>
+      </mat-card>
+          
 </div>

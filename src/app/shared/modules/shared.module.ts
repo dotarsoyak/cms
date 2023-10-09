@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { NavbarComponent } from '../material/navbar.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
+import { SnackBarAnnotatedComponent } from '../material/snackbar/snack-bar-annotated.component';
+import { PageNotFoundComponent } from '../page-not-found.component';
 
 @NgModule({
   imports: [
@@ -9,10 +10,12 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   declarations:[
-    NavbarComponent
+    PageNotFoundComponent,
+    SnackBarAnnotatedComponent
   ],
   exports: [
-    NavbarComponent
+    PageNotFoundComponent,
+    SnackBarAnnotatedComponent
   ]
 })
 export class SharedModule { }

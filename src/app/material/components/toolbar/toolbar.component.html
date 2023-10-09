@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <button mat-button class="sidenav-toggle" (click)="toggleSideNav.emit();">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Blog broadcast</span>
+    <div class="navbar-container">
+        <button mat-button class="navbar-item"><a [routerLink]="'/home'">Home</a></button>
+        <button mat-button class="navbar-item"><a [routerLink]="'/about'">About</a></button>
+        <button mat-button class="navbar-item"><a [routerLink]="'/login'">Login</a></button>
+    </div>
+</mat-toolbar>

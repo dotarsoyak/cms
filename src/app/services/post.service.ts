@@ -1,19 +1,20 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IProduct } from '../models/product';
+import { IPost } from '../models/post';
 import { Observable, catchError, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
-  productUrl:string='api/products/products.json';
+export class PostService {
+  postUrl:string='https://springboot-blog-api-cd884f5aea0c.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 
-  getProducts():Observable<IProduct[]>{
-    return this.http.get<IProduct[]>(this.productUrl)
+  getPosts():Observable<IPost[]>{
+    return this.http.get<IPost[]>(`${this.postUrl}/post/all`)
     .pipe(
+      tap(item => console.log(`post recuperados ${item}`)),
       catchError(this.handleError)
     );
   }

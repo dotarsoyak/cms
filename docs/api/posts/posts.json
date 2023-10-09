@@ -1,0 +1,32 @@
+[
+    {
+        "id": 10,
+        "title": "Post 1",
+        "content": "Contenido del post 1",
+        "author": "genaro_r.",
+        "draft": false,
+        "created": "2023-01-02",
+        "updated": "1900-01-01",
+        "comments": []
+    },
+    {
+        "id": 10,
+        "title": "Post 2",
+        "content": "Contenido del post 2",
+        "author": "Pedro López",
+        "draft": false,
+        "created": "2023-02-02",
+        "updated": "1900-01-01",
+        "comments": []
+    },
+    {
+        "id": 10,
+        "title": "Post 3",
+        "content": "Contenido del post 3",
+        "author": "Fernando",
+        "draft": false,
+        "created": "2023-02-02",
+        "updated": "1900-01-01",
+        "comments": []
+    }
+]

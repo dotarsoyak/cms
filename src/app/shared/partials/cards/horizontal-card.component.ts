@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from 'src/app/models/product';
+import { IPost } from 'src/app/models/post';
 
 @Component({
   selector: 'cms-horizontal-card',
@@ -8,6 +8,6 @@ import { IProduct } from 'src/app/models/product';
 })
 export class HorizontalCardComponent {
 
-  @Input() products: IProduct[] | undefined;
+  @Input() posts: IPost[] | undefined;
 
 }

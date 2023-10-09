@@ -1,22 +1,21 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { IProduct } from './models/product';
-import { ProductService } from './services/product.service';
 import { Subscription } from 'rxjs';
+import { IPost } from './models/post';
+import { PostService } from './services/post.service';
 
 @Component({
-  selector: 'cms-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  products: IProduct[] | undefined;
+  posts: IPost[] | undefined;
   sub!: Subscription;
 
-  constructor(private productService: ProductService){}
+  constructor(private postService: PostService){}
   
   ngOnInit(): void {
-    this.sub = this.productService.getProducts().subscribe({
-      next: products => this.products = products
+    this.sub = this.postService.getPosts().subscribe({
+      next: posts => this.posts = posts
     });
   }
 
