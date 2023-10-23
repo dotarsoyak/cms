@@ -1,6 +1,6 @@
 [
     {
-        "id": 10,
+        "id": 1,
         "title": "Post 1",
         "content": "Contenido del post 1",
         "author": "genaro_r.",
@@ -10,7 +10,7 @@
         "comments": []
     },
     {
-        "id": 10,
+        "id": 2,
         "title": "Post 2",
         "content": "Contenido del post 2",
         "author": "Pedro López",
@@ -20,9 +20,46 @@
         "comments": []
     },
     {
-        "id": 10,
+        "id": 3,
         "title": "Post 3",
         "content": "Contenido del post 3",
+        "author": "Fernando",
+        "draft": false,
+        "created": "2023-02-02",
+        "updated": "1900-01-01",
+        "comments": []
+    },
+    {
+        "id": 4,
+        "title": "Post 4",
+        "content": "Contenido del post 4",
+        "author": "Fernando",
+        "draft": false,
+        "created": "2023-02-02",
+        "updated": "1900-01-01",
+        "comments": []
+    },
+    {
+        "id": 5,
+        "title": "Cómo mantener los grifos limpios",
+        "content": "El mantenimiento de los grifos de la cocina y del baño no es muy complicado pero debe hacerse de manera regular para que no cause problemas en nuestras tuberias. Un mal funcionamiento de los grifos por suciedad o fugas, puede dar lugar a la aparición de cucarachas y otros insectos que suelen desplazarse por las tuber&iacute;as y acudir a donde hay suciedad, as&iacute; que ten mucho cuidado y ded&iacute;cale tiempo a limpiar los grifos.<br /> Como ya has de suponer la principal causa de problemas de opacidad, suciedad y &oacute;xido en los grifos son las llamadas aguas duras (el agua com&uacute;n de nuestras viviendas), que dejan manchas de cal.<br /> D&aacute;ndole los cuidados necesarios, los grifos estar&aacute;n siempre como el primer d&iacute;a, as&iacute; que toma nota de estos consejos sobre c&oacute;mo limpiar los grifos:<br /> Para eliminar las manchas de cal sobre el acero (principal material de fabricaci&oacute;n) y aunque existen algunos productos espec&iacute;ficos para ello, bastara; con palicar abundante agua caliente con lej&iacute;a.<br /> Si observas alguna mancha sobre sus grifos, un truco muy efectivo es el de utilizar vinagre o medio lim&oacute;n, dejandolo sobre la mancha el mayor tiempo posible. Puedes repetir el proceso hasta que la mancha desaparezca de los grifos totalmente; si lo anterior no es suficiente, puedes usar un cepillo de dientes con un detergente espeso.",
+        "author": "Fernando",
+        "draft": false,
+        "created": "2023-02-02",
+        "updated": "1900-01-01",
+        "comments": [
+            {
+                "content":"Me gustó mucho este artículo me pueden enviar mas información.",
+                "created":"2023-03-02",
+                "author":"perla_31",
+                "postId":"10"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Post 6",
+        "content": "Contenido del post 6",
         "author": "Fernando",
         "draft": false,
         "created": "2023-02-02",
