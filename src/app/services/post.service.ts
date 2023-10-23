@@ -8,7 +8,7 @@ import { BehaviorSubject, NotFoundError, Observable, catchError, map, throwError
 })
 export class PostService {
   //postUrl:string='https://springboot-blog-api-cd884f5aea0c.herokuapp.com';
-  postUrl:string='/api/posts/posts.json';
+  postUrl:string='api/posts/posts.json';
   private _posts: BehaviorSubject<Post[]>;
 
   private dataStore: {

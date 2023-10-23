@@ -8,7 +8,7 @@ import { Observable, catchError, tap, throwError } from 'rxjs';
 })
 export class CommentService {
   //commentUrl:string='https://springboot-blog-api-cd884f5aea0c.herokuapp.com';
-  commentUrl:string='/api/comments/comments.json';
+  commentUrl:string='api/comments/comments.json';
 
   constructor(private http: HttpClient) { }
 
