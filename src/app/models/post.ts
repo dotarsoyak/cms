@@ -1,6 +1,6 @@
-import { IComment } from "./comment";
+import { Comment } from "./comment";
 
-export interface IPost{
+export interface Post{
     id:number;
     title:string;
     content:string;
@@ -8,5 +8,5 @@ export interface IPost{
     draft:boolean;
     created:string;
     updated:string;
-    comments:IComment[];
+    comments:Comment[];
 }

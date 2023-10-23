@@ -1,0 +1,26 @@
+[
+    {
+        "content":"El producto es de muy buena calidad.",
+        "created":"2023-03-02",
+        "author":"perla_31",
+        "postId":10
+    },
+    {
+        "content":"100% recomendado este artículo.",
+        "created":"2023-04-02",
+        "author":"perla_31",
+        "postId":1
+    },
+    {
+        "content":"Estas pilas duran mucho llevo años usandolas.",
+        "created":"2023-03-10",
+        "author":"perla_31",
+        "postId":2
+    },
+    {
+        "content":"Esta hecho de muy buen material.",
+        "created":"2023-06-15",
+        "author":"perla_31",
+        "postId":3
+    }
+]

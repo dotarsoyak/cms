@@ -1,7 +1,7 @@
 /*Post comment container*/
-export interface IComment{
-    postId: number;
-    comment:string;
+export interface Comment{
+    content:string;
     created:string;
     author:string;
+    postId:string;
 }

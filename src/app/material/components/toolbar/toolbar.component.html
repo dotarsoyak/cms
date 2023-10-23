@@ -4,8 +4,15 @@
     </button>
     <span>Blog broadcast</span>
     <div class="navbar-container">
-        <button mat-button class="navbar-item"><a [routerLink]="'/home'">Home</a></button>
-        <button mat-button class="navbar-item"><a [routerLink]="'/about'">About</a></button>
-        <button mat-button class="navbar-item"><a [routerLink]="'/login'">Login</a></button>
+        <button mat-button class="navbar-item"><a [routerLink]="'/home'">Inicio</a></button>
+        <button mat-button class="navbar-item"><a [routerLink]="'/about'">Acerca de</a></button>
+        <div class="item-3-container" *ngIf="!auth.isAuthenticated()">
+            <button mat-flat-button color="accent" 
+            class="navbar-item item-3"><a [routerLink]="'/login'">Ingresar</a></button>
+        </div>
+        <div class="item-3-container" *ngIf="auth.isAuthenticated()">
+            <button mat-flat-button color="accent" 
+            class="navbar-item item-3"><a>Salir</a></button>
+        </div>
     </div>
 </mat-toolbar>

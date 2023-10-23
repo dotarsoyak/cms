@@ -1,0 +1,4 @@
+Recent Comments<br/><br/>
+<p *ngFor="let comment of comments">
+    <a routerLink="/post/{{comment.postId}}">{{comment.content | truncateText:0:40}}</a>
+</p>

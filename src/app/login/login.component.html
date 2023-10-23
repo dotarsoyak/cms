@@ -1,3 +1,23 @@
 <div class="container">
-    <p>Formulario de login</p>
+    <h1>Login</h1><br/>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off" class="login-form">
+        <mat-form-field class="login-full-width">
+            <mat-label>User Name</mat-label>
+            <input #user="ngModel" required matInput type="text" [(ngModel)]="currentUser!.name" name="name" placeholder="">
+            <mat-error *ngIf="user.invalid">El nombre de usuario es requerido.</mat-error>
+        </mat-form-field>
+        <mat-form-field class="login-full-width">
+            <mat-label for="password">Password</mat-label>
+            <input #pass="ngModel" required matInput type="password" [(ngModel)]="currentUser!.password" name="password" placeholder="">
+            <mat-error *ngIf="pass.invalid">El password es requerido.</mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="currentUser.error!.length > 0">{{currentUser.error}}</mat-error>
+        <div><br/>
+            <button mat-flat-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+            <button mat-flat-button type="button" >Cancel</button>
+        </div>
+    </form>
 </div>
+
+<br/>
+UserName: {{ user.value | json }}

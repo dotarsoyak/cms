@@ -25,13 +25,31 @@ $iconWidth: 56px;
 
 .navbar-container{
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
 
     @media (max-width: 720px){
         display: none;
     }
 }
+
 .navbar-item a{
     text-decoration: none;
     color: white;
     font-weight: normal;
+}
+.item-3-container{
+    display: flex; 
+    width: 100%; 
+    flex-direction: row-reverse;
+}
+
+.item-3{
+    flex: 1 auto;
+    max-width: 100px;
+
+    a{
+        color: #000;
+    }
 }

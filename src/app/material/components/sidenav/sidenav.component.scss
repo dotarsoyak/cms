@@ -7,6 +7,10 @@
 }
 .sidenav{
   width: 240px;
+
+  @media (min-width: 720px){
+      display: none;
+  }
 }
 .sidenav-content{
   display:flex;

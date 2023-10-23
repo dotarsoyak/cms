@@ -1,20 +1,45 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IPost } from '../models/post';
-import { Observable, catchError, tap, throwError } from 'rxjs';
+import { Post } from '../models/post';
+import { BehaviorSubject, NotFoundError, Observable, catchError, map, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  postUrl:string='https://springboot-blog-api-cd884f5aea0c.herokuapp.com';
+  //postUrl:string='https://springboot-blog-api-cd884f5aea0c.herokuapp.com';
+  postUrl:string='/api/posts/posts.json';
+  private _posts: BehaviorSubject<Post[]>;
 
-  constructor(private http: HttpClient) { }
+  private dataStore: {
+    posts: Post[]
+  } = {
+    posts: []
+  };
 
-  getPosts():Observable<IPost[]>{
-    return this.http.get<IPost[]>(`${this.postUrl}/post/all`)
+  constructor(private http: HttpClient) { 
+    this._posts = new BehaviorSubject<Post[]>([]);
+  }
+
+  get posts():Observable<Post[]>{
+    return this._posts.asObservable();
+  }
+
+  loadAll(){
+    this.http.get<Post[]>(this.postUrl)
+    .subscribe(
+      data => {
+        this.dataStore.posts = data;
+        this._posts.next(Object.assign({}, this.dataStore).posts);
+      },
+      error => {catchError(this.handleError)}
+    );
+  }
+
+  getPosts():Observable<Post[]>{
+    return this.http.get<Post[]>(`${this.postUrl}`)
     .pipe(
-      tap(item => console.log(`post recuperados ${item}`)),
+      //tap(item => console.log(`post recuperados ${item}`)),
       catchError(this.handleError)
     );
   }
@@ -30,4 +55,24 @@ export class PostService {
     console.error(errorMessage);
     return  throwError(()=>errorMessage);
   }
+
+  getPostById(postId:number):Observable<Post | undefined>{
+    //TODO: Hacer método getPostById en servicio java
+    let filteredPost: Post | undefined;
+    let founded=false;
+    return this.getPosts()
+    .pipe(
+      map(data => {
+        data.forEach(item => {
+          if(item.id == postId){
+            filteredPost = item;
+            founded = true;
+          }
+        });
+        
+        return founded ? filteredPost : undefined;
+      })
+    );
+  }
+
 }
